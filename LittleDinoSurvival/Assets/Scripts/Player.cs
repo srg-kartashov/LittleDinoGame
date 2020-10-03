@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
 
 
 
-    private AdManager _adManager;
+
     private Interface _interface;
     private SpawnFireballs _spawnFireballs;
     private Animator _animator;
@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
         _maxCameraX = -_minCameraX;
         _spawnFireballs = GameObject.Find("GameManager").GetComponent<SpawnFireballs>();
         _interface = GameObject.Find("Interface").GetComponent<Interface>();
-        _adManager = GameObject.Find("GameManager").GetComponent<AdManager>();
+    
     }
 
     private CharState State
@@ -130,7 +130,7 @@ public class Player : MonoBehaviour
                 SaveLoadManager.Instance.SaveScore();
                 
                 _interface.ShowGOWindow();
-                _adManager.Show();
+                
 
             }
 
